@@ -9,7 +9,7 @@ public class MinimoComunMultiplo {
 		int N2 = teclado.nextInt();		//ALMACENA VALOR EN N2
 		int menor=0;		//INICIALIZA MENOR
 		int mayor=0;		//INICIALIZA MAYOR
-		int mcm=0;			//INICIALIZA MCM
+		
 		
 		if (N1>N2) {		//SI N1 ES MAYOR QUE N2
 			mayor = N1;		//MAYOR
@@ -18,9 +18,9 @@ public class MinimoComunMultiplo {
 			mayor = N2;		//MAYOR
 			menor = N1;		//MENOR
 		} 
-		mcm=mayor;		//MCM PUEDE SER EL MAYOR
-		while (mcm%N1!=0 || mcm%N2!=0) {		//MIENTRAS EL MCM NO SEA MÚLTIPLO DE AMBOS
-			mcm++;		//SUMAR UNO A MCM
+		int mcm=mayor;
+		while (mcm%menor!=0) {		//MIENTRAS EL MCM NO SEA MÚLTIPLO DE AMBOS
+			mcm=mcm+mayor;		//SUMAR UNO A MCM
 		}
 				//OUTPUT
 		System.out.print(mcm);
